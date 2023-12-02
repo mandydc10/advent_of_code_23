@@ -1,6 +1,6 @@
 <h1><a href="https://adventofcode.com/">Advent of Code 2023</a></h1>
 
-<h2><a href="https://adventofcode.com/2023/day/1">--- Day 1: Trebuchet?! ---</a></h2>
+<h2><a href="https://adventofcode.com/2023/day/1">Day 1: Trebuchet?!</a></h2>
 
 <h3>--- Part One ---</h3>
 <p>
@@ -26,7 +26,7 @@ In this example, the calibration values of these four lines are 12, 38, 15, and 
 
 Consider your entire calibration document. What is the sum of all of the calibration values?
 
-Your puzzle answer was 54951.
+<strong>Your puzzle answer was 54951.</strong>
 
 <h3>--- Part Two ---</h3>
 Your calculation isn't quite right. It looks like some of the digits are actually spelled out with letters: one, two, three, four, five, six, seven, eight, and nine also count as valid "digits".
@@ -44,15 +44,14 @@ In this example, the calibration values are 29, 83, 13, 24, 42, 14, and 76. Addi
 
 What is the sum of all of the calibration values?
 
-Your puzzle answer was 55218.
+<strong>Your puzzle answer was 55218.
 
-Both parts of this puzzle are complete! They provide two gold stars: **
+Both parts of this puzzle are complete! They provide two gold stars: **</strong>
 </p>
 
-<h2><a href="https://adventofcode.com/2023/day/2">Day 2</a></h2>
+<h2><a href="https://adventofcode.com/2023/day/2">Day 2: Cube Conundrum</a></h2>
+<h3>--- Part One ---</h3>
 <p>
---- Day 2: Cube Conundrum ---
-<br>
 You're launched high into the atmosphere! The apex of your trajectory just barely reaches the surface of a large island floating in the sky. You gently land in a fluffy pile of leaves. It's quite cold, but you don't see much snow. An Elf runs over to greet you.
 
 The Elf explains that you've arrived at Snow Island and apologizes for the lack of snow. He'll be happy to explain the situation, but it's a bit of a walk, so you have some time. They don't get many visitors up here; would you like to play a game in the meantime?
@@ -78,9 +77,9 @@ In the example above, games 1, 2, and 5 would have been possible if the bag had 
 
 Determine which games would have been possible if the bag had been loaded with only 12 red cubes, 13 green cubes, and 14 blue cubes. What is the sum of the IDs of those games?
 
-Your puzzle answer was 2449.
+<strong>Your puzzle answer was 2449.</strong>
 
---- Part Two ---
+<h3>--- Part Two ---</h3>
 The Elf says they've stopped producing snow because they aren't getting any water! He isn't sure why the water stopped; however, he can show you how to get to the water source to check it out for yourself. It's just up ahead!
 
 As you continue your walk, the Elf poses a second question: in each game you played, what is the fewest number of cubes of each color that could have been in the bag to make the game possible?
@@ -101,7 +100,7 @@ The power of a set of cubes is equal to the numbers of red, green, and blue cube
 
 For each game, find the minimum set of cubes that must have been present. What is the sum of the power of these sets?
 
-Your puzzle answer was 63981.
+<strong>Your puzzle answer was 63981.
 
-Both parts of this puzzle are complete! They provide two gold stars: **
+Both parts of this puzzle are complete! They provide two gold stars: **</strong>
 </p>
