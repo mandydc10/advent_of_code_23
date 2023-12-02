@@ -1,8 +1,9 @@
 <h1><a href="https://adventofcode.com/">Advent of Code 2023</a></h1>
 
-<h2><a href="https://adventofcode.com/2023/day/1">Day 1</a></h2>
+<h2><a href="https://adventofcode.com/2023/day/1">--- Day 1: Trebuchet?! ---</a></h2>
 
-<p>--- Day 1: Trebuchet?! ---
+<h3>--- Part One ---</h3>
+<p>
 Something is wrong with global snow production, and you've been selected to take a look. The Elves have even given you a map; on it, they've used stars to mark the top fifty locations that are likely to be having problems.
 
 You've been doing this long enough to know that to restore snow operations, you need to check all fifty stars by December 25th.
@@ -27,7 +28,7 @@ Consider your entire calibration document. What is the sum of all of the calibra
 
 Your puzzle answer was 54951.
 
---- Part Two ---
+<h3>--- Part Two ---</h3>
 Your calculation isn't quite right. It looks like some of the digits are actually spelled out with letters: one, two, three, four, five, six, seven, eight, and nine also count as valid "digits".
 
 Equipped with this new information, you now need to find the real first and last digit on each line. For example:
@@ -51,6 +52,7 @@ Both parts of this puzzle are complete! They provide two gold stars: **
 <h2><a href="https://adventofcode.com/2023/day/2">Day 2</a></h2>
 <p>
 --- Day 2: Cube Conundrum ---
+<br>
 You're launched high into the atmosphere! The apex of your trajectory just barely reaches the surface of a large island floating in the sky. You gently land in a fluffy pile of leaves. It's quite cold, but you don't see much snow. An Elf runs over to greet you.
 
 The Elf explains that you've arrived at Snow Island and apologizes for the lack of snow. He'll be happy to explain the situation, but it's a bit of a walk, so you have some time. They don't get many visitors up here; would you like to play a game in the meantime?
