@@ -99,10 +99,8 @@
 # PART TWO
 grid = []
 gridline_length = 0
-# symbols = []
 potential_parts_list = []
 gears = []
-# sum_of_valid_part_numbers = 0
 
 class Potential_part:
     def __init__(self, value, row, index, length):
@@ -121,8 +119,6 @@ class Gear:
         return ({self.row}, {self.index}, {self.value})
 
 def find_star_near_numbers(grid, part):
-    # print(f"{part.value} in validate loop")
-    # validity = False
     if part.row == 0:
         row_start = 0
         row_end = 1
@@ -159,7 +155,6 @@ def find_star_near_numbers(grid, part):
     return
 
 
-
 with open ("input.txt", encoding="UTF-8", mode="r") as file:
     reader = file.readlines()
 
@@ -171,28 +166,34 @@ with open ("input.txt", encoding="UTF-8", mode="r") as file:
             # print(reader[line][char])
             number = reader[line][char]
             row.append(number)
-            # if not (reader[line][char].isdigit() or reader[line][char] == '.' or reader[line][char] == '\n') and reader[line][char] not in symbols:
-            #     symbols.append(reader[line][char])
             if reader[line][char].isdigit() and reader[line][char-1].isdigit() == False:
                 current_length = 0
                 number_as_string = ""
                 while reader[line][char+current_length].isdigit():
                     number_as_string += reader[line][char+current_length]
                     current_length += 1
-                # print(number_as_string)
-                # print(number, current_length)
                 part = Potential_part(int(number_as_string), line, char, current_length)
-                # print(part.value)
                 potential_parts_list.append(part)
         grid.append(row)
 
 
 for part in potential_parts_list:
     find_star_near_numbers(grid, part) 
-    
+
+list_of_gear_ratios = []
+sum_of_gear_ratios = 0
+
 # print(repr(gears))
+
 for i, gear in enumerate(gears):
     for comparison_gear in (gears):
         if gear.index == comparison_gear.index and gear.row == comparison_gear.row and gear.value != comparison_gear.value:
-            print(f"{i} Star with double match at line {gear.row} with index {gear.index} with value {gear.value}")
-      
+            gear_ratio = (min(gear.value, comparison_gear.value), max(gear.value, comparison_gear.value))
+            if gear_ratio not in list_of_gear_ratios:
+                list_of_gear_ratios.append(gear_ratio)
+
+for gear_ratio in list_of_gear_ratios:
+    ratio = gear_ratio[0] * gear_ratio[1]
+    sum_of_gear_ratios += ratio
+
+print(sum_of_gear_ratios)
