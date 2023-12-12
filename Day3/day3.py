@@ -1,4 +1,3 @@
-
 grid = []
 gridline_length = 0
 symbols = []
@@ -13,6 +12,7 @@ class Potential_part:
         self.length = length
 
 def validate_part(grid, part):
+    # print(f"{part.value} in validate loop")
     validity = False
     if part.row == 0:
         row_start = 0
@@ -34,22 +34,23 @@ def validate_part(grid, part):
         index_start = -1
         index_end = index_start + part.length + 2
 
-    for r in range(row_start,row_end):
-        print(f"row iteration {r}")
-        for item in range(index_start, index_end):
-            print(f"index iteration {item}")
+    for r in range(row_start, (row_end + 1)):
+        # print(f"row iteration {r}")
+        for item in range(index_start, (index_end)):
+            # print(f"index iteration {item}")
             character = grid[part.row + r][part.index + item]
             # print(character)
             if character in symbols:
-                print(character, part.value, part.row, part.index)
+                # print(character, part.value, part.row, part.index)
                 validity = True
             else:
-                print("No adjacent symbols")
+                # print("No adjacent symbols")
+                pass
     return validity
 
 
 
-with open ("Day3/input.txt", encoding="UTF-8", mode="r") as file:
+with open ("input.txt", encoding="UTF-8", mode="r") as file:
     reader = file.readlines()
 
     for line in range(len(reader)):
@@ -76,15 +77,17 @@ with open ("Day3/input.txt", encoding="UTF-8", mode="r") as file:
         grid.append(row)
 
 # print(gridline_length) = 140
+count = 0
 
 for part in potential_parts_list:
-    print(f"Part is {part.value}; row is {part.row}, index is {part.index}")
+    # print(f"Part is {part.value}; row is {part.row}, index is {part.index}")
     validity = validate_part(grid, part) 
     if validity == True:
+        count += 1
         # valid_parts_list.append(part)
-        print(f"{part.value} on row {part.row} is a valid part")
+        # print(f"{part.value} on row {part.row} is a valid part")
         sum_of_valid_part_numbers += part.value
+        # print(f"running total {sum_of_valid_part_numbers}")
 
-# print(f"{grid} this is the grid")
-# print(len(grid))
 print(sum_of_valid_part_numbers)
+print(f"Of {len(potential_parts_list)} parts, {count} were valid")
